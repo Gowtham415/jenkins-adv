@@ -1,10 +1,11 @@
+
 pipeline{
     agent any
 
  parameters {
-    string(name: 'VAR1', description: 'some description', trim: true)
-    string(name: 'VAR2', description: 'some description', trim: true)
-    string(name: 'VAR3', description: 'some description', trim: true)
+    string(name: 'VAR1', default:'Selenium' description: 'some description', trim: true)
+    string(name: 'VAR2', default:'Jenkins' description: 'some description', trim: true)
+     choice(name:'BROWSER', choices: ['CHROME', 'FIREFOX', 'SAFARI'], description: 'Select a browser', default: 'CHROME')
 }
     environment{
         NEW_VERSION='1.3.0'
@@ -29,6 +30,7 @@ pipeline{
                 }
             }
             steps{
+                echo "Tests are running in the browser ${BROWSER}"
                 echo "This is the test phase"
             }
         }
