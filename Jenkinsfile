@@ -1,5 +1,11 @@
 pipeline{
     agent any
+
+ parameters {
+    string(name: 'VAR1', description: 'some description', trim: true)
+    string(name: 'VAR2', description: 'some description', trim: true)
+    string(name: 'VAR3', description: 'some description', trim: true)
+}
     environment{
         NEW_VERSION='1.3.0'
     }
