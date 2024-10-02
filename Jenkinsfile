@@ -18,7 +18,7 @@ pipeline{
                 }
             }
             steps{
-                echo "This is the build phase ${VAR1} ${VAR2} ${VAR3}"
+                echo "This is the build phase ${params.VAR1} ${params.VAR2}"
                 echo "this is the version ${NEW_VERSION}"
             }
         }
@@ -30,7 +30,7 @@ pipeline{
                 }
             }
             steps{
-                echo "Tests are running in the browser ${BROWSER}"
+                echo "Tests are running in the browser ${params.BROWSER}"
                 echo "This is the test phase"
             }
         }
