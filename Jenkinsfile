@@ -3,8 +3,8 @@ pipeline{
     agent any
 
  parameters {
-    string(name: 'VAR1', default:'Selenium' description: 'some description', trim: true)
-    string(name: 'VAR2', default:'Jenkins' description: 'some description', trim: true)
+    string(name: 'VAR1', default:'Selenium', description: 'some description', trim: true)
+    string(name: 'VAR2', default:'Jenkins', description: 'some description', trim: true)
      choice(name:'BROWSER', choices: ['CHROME', 'FIREFOX', 'SAFARI'], description: 'Select a browser', default: 'CHROME')
 }
     environment{
