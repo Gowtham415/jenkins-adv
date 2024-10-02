@@ -11,19 +11,19 @@ pipeline{
                 }
             }
             steps{
-                echo "This is build phase"
+                echo "This is the build phase"
                 echo "this is the version ${NEW_VERSION}"
             }
         }
 
         stage("Test"){
-            while{
+            when{
                 expression{
                     BRANCH_NAME='dev' || BRANCH_NAME='master'
                 }
             }
             steps{
-                echo "This is test phase"
+                echo "This is the test phase"
             }
         }
 
