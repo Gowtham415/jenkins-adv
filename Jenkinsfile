@@ -17,7 +17,7 @@ pipeline{
                 }
             }
             steps{
-                echo "This is the build phase"
+                echo "This is the build phase ${VAR1} ${VAR2} ${VAR3}"
                 echo "this is the version ${NEW_VERSION}"
             }
         }
