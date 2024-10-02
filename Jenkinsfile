@@ -5,7 +5,7 @@ pipeline{
  parameters {
     string(name: 'VAR1', defaultValue:'Selenium', description: 'some description', trim: true)
     string(name: 'VAR2', defaultValue:'Jenkins', description: 'some description', trim: true)
-     choice(name:'BROWSER', choices: ['CHROME', 'FIREFOX', 'SAFARI'], description: 'Select a browser', defaultValue: 'CHROME')
+     choice(name:'BROWSER', choices: ['CHROME', 'FIREFOX', 'SAFARI'], description: 'Select a browser')
 }
     environment{
         NEW_VERSION='1.3.0'
